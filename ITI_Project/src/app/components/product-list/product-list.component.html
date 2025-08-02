@@ -1,0 +1,26 @@
+<div class="product-management-container">
+  <div class="header-section">
+    <h1>Product Management</h1>
+    <button class="add-product-button" [routerLink]="['/products',0]">➕ Add Product</button>
+  </div>
+
+  <div class="filter-search-section">
+    <input
+      type="text"
+      placeholder="Search by name or category..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+      class="search-input"
+    />
+    <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()" class="category-select">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+
+  <div class="product-cards-container">
+    <app-product-card *ngFor="let product of filteredProducts" [product]="product" (deleted)="onProductDeleted($event)"></app-product-card>
+    <div *ngIf="filteredProducts.length === 0" class="no-products-message">
+      No products found matching your criteria.
+    </div>
+  </div>
+</div>

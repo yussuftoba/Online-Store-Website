@@ -1,0 +1,13 @@
+
+.navbar .nav-link {
+  color:rgb(230, 230, 231) !important; 
+  font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+  color: rgb(168, 172, 176) !important;
+  text-decoration: underline;
+}.navbar-brand {
+  color: rgb(191, 195, 199) !important;
+}
+

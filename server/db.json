@@ -1,0 +1,110 @@
+{
+  "products": [
+    {
+      "name": "Wireless Headphones",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "price": 150,
+      "image": "https://picsum.photos/id/180/300/200",
+      "category": "Electronics",
+      "stock": 50,
+      "rating": 4.5,
+      "id": "1"
+    },
+    {
+      "name": "helling shoes",
+      "description": "Lightweight and comfortable running shoes.",
+      "price": 70,
+      "image": "https://picsum.photos/id/21/300/200",
+      "category": "Accessories",
+      "stock": 60,
+      "rating": 3.4,
+      "id": "3"
+    },
+    {
+      "name": "Leather Wallet",
+      "description": "Classic men's leather wallet with multiple compartments.",
+      "price": 29.99,
+      "image": "https://picsum.photos/id/1062/300/200",
+      "category": "Accessories",
+      "stock": 50,
+      "rating": 4,
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "Gaming Mouse",
+      "description": "Ergonomic gaming mouse with customizable DPI.",
+      "price": 39.99,
+      "image": "https://picsum.photos/id/250/300/200",
+      "category": "Electronics",
+      "stock": 25,
+      "rating": 4.3
+    },
+    {
+      "id": "6",
+      "name": "Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker with deep bass.",
+      "price": 59.99,
+      "image": "https://picsum.photos/id/1084/300/200",
+      "category": "Electronics",
+      "stock": 18,
+      "rating": 4.4
+    },
+    {
+      "id": "7",
+      "name": "Backpack",
+      "description": "Water-resistant backpack with laptop compartment.",
+      "price": 44.99,
+      "image": "https://picsum.photos/id/103/300/200",
+      "category": "Fashion",
+      "stock": 40,
+      "rating": 4.6
+    },
+    {
+      "id": "8",
+      "name": "Coffee Maker",
+      "description": "Automatic drip coffee maker with timer function.",
+      "price": 79.99,
+      "image": "https://picsum.photos/id/1060/300/200",
+      "category": "Home",
+      "stock": 12,
+      "rating": 4.1
+    },
+    {
+      "name": "Wooden Dining Table",
+      "description": "Let me know if you want a similar breakdown for your components or template files",
+      "price": 36,
+      "image": "https://picsum.photos/id/1040/300/200",
+      "category": "Home",
+      "stock": 30,
+      "rating": 4.5,
+      "id": "e062"
+    }
+  ],
+  "cart": [
+    {
+      "id": "e3fe",
+      "productId": "4",
+      "productImage": "https://picsum.photos/id/1062/300/200",
+      "name": "Leather Wallet",
+      "price": 29.99,
+      "quantity": 6
+    },
+    {
+      "id": "db17",
+      "productId": "3",
+      "productImage": "https://picsum.photos/id/21/300/200",
+      "name": "helling shoes",
+      "price": 69.99,
+      "quantity": 7
+    },
+    {
+      "id": "34bc",
+      "productId": "1",
+      "productImage": "https://picsum.photos/id/180/300/200",
+      "name": "Wireless Headphones",
+      "price": 150,
+      "quantity": 9
+    }
+  ]
+}

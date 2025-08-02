@@ -1,0 +1,57 @@
+<div class="container">
+
+  <form class="form-group" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+    <!-- Name -->
+    <input type="text" class="form-control my-3" name="name" placeholder="Name" formControlName="name">
+    <div *ngIf="getName.touched && getName.invalid" class="text-danger">
+      <small *ngIf="getName.errors?.['required']">Name is required.</small>
+      <small *ngIf="getName.errors?.['minlength']">Minimum 3 characters required.</small>
+    </div>
+
+    <!-- Description -->
+    <textarea class="form-control my-3" name="description" placeholder="Description" formControlName="description"></textarea>
+    <div *ngIf="getDescription.touched && getDescription.invalid" class="text-danger">
+      <small *ngIf="getDescription.errors?.['required']">Description is required.</small>
+    </div>
+
+    <!-- Price -->
+    <input type="number" class="form-control my-3" name="price" placeholder="Price" formControlName="price">
+    <div *ngIf="getprice.touched && getprice.invalid" class="text-danger">
+      <small *ngIf="getprice.errors?.['required']">Price is required.</small>
+      <small *ngIf="getprice.errors?.['min']">Price must be greater than 0.</small>
+    </div>
+
+    <!-- Image -->
+    <input type="text" class="form-control my-3" name="image" placeholder="Image URL" formControlName="image">
+    <div *ngIf="getImage.touched && getImage.invalid" class="text-danger">
+      <small *ngIf="getImage.errors?.['required']">Image URL is required.</small>
+    </div>
+
+    <!-- Category -->
+    <select class="form-select my-3" name="category" formControlName="category">
+      <option value="">Select Category</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+    <div *ngIf="getCategory.touched && getCategory.invalid" class="text-danger">
+      <small *ngIf="getCategory.errors?.['required']">Category is required.</small>
+    </div>
+
+    <!-- Stock -->
+    <input type="number" class="form-control my-3" name="stock" placeholder="Stock" formControlName="stock">
+    <div *ngIf="getStock.touched && getStock.invalid" class="text-danger">
+      <small *ngIf="getStock.errors?.['required']">Stock is required.</small>
+      <small *ngIf="getStock.errors?.['min']">Stock cannot be below 0.</small>
+    </div>
+
+    <!-- Rating -->
+    <input type="number" class="form-control my-3" name="rating" placeholder="Rating (0 - 5)" formControlName="rating" step="0.1" max="5" min="0">
+    <div *ngIf="getRating.touched && getRating.invalid" class="text-danger">
+      <small *ngIf="getRating.errors?.['required']">Rating is required.</small>
+      <small *ngIf="getRating.errors?.['max']">Rating cannot exceed 5.</small>
+      <small *ngIf="getRating.errors?.['min']">Rating cannot be below 0.</small>
+    </div>
+    <button class="btn btn-primary my-3" type="submit">Add Product</button>
+
+  </form>
+</div>

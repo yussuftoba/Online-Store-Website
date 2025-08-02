@@ -1,0 +1,22 @@
+<div class="product-card">
+  <div class="product-image-wrapper">
+    <img [src]="product.image" [alt]="product.name" class="product-image">
+  </div>
+  <div class="product-details">
+    <h3 class="product-name">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    <div class="product-meta">
+      <span class="product-category">Category: {{ product.category }}</span>
+      <span class="product-stock">Stock: {{ product.stock }}</span>
+      <span class="product-rating">Rating: {{ product.rating }} ⭐</span>
+    </div>
+    <div class="product-price">
+      ${{ product.price | number:'1.2-2' }}
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="action-button add-to-cart-button" (click)="onAddToCart()">Add to Card</button>
+    <button class="action-button edit-button" [routerLink]="['/products', product.id]">Edit Product</button>
+    <button class="action-button delete-button" (click)="onDeleteProduct(product.id)">Delete Product</button>
+  </div>
+</div>
